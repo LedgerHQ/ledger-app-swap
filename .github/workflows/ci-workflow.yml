@@ -2,6 +2,10 @@ name: Compilation & tests
 
 on:
   workflow_dispatch:
+    inputs:
+      id:
+        description: 'Workflow run ID'
+        required: false
   push:
     branches:
     - master
@@ -12,6 +16,13 @@ on:
     - develop
 
 jobs:
+  id:
+    name: Exporting workflow run ID
+    runs-on: ubuntu-latest
+    steps:
+      - name: ${{ github.event.inputs.id }}
+        run: echo Workflow run ID ${{ github.event.inputs.id }}
+
   build_sideloaded_applications:
     strategy:
       matrix:
