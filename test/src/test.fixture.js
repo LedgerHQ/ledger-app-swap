@@ -10,7 +10,7 @@ async function waitForAppScreen(sim) {
 
 const sim_options = {
     // Uncomment for testing
-    // logging: true,
+    logging: true,
     X11: true,
     startText: 'is ready',
     custom: '',
