@@ -24,6 +24,7 @@ from .ton import TON_PACKED_DERIVATION_PATH, TON_CONF
 from .tron import TRX_PACKED_DERIVATION_PATH, TRX_CONF
 from .tron import TRX_USDT_CONF, TRX_USDC_CONF, TRX_TUSD_CONF, TRX_USDD_CONF
 from .cardano import ADA_BYRON_PACKED_DERIVATION_PATH, ADA_SHELLEY_PACKED_DERIVATION_PATH, ADA_CONF
+from .aptos import APTOS_PACKED_DERIVATION_PATH, APTOS_CONF
 from .near import NEAR_PACKED_DERIVATION_PATH, NEAR_CONF
 
 @dataclass
@@ -63,6 +64,7 @@ USDD_CURRENCY_CONFIGURATION = CurrencyConfiguration(ticker="USDD", conf=TRX_USDD
 ADA_BYRON_CURRENCY_CONFIGURATION = CurrencyConfiguration(ticker="ADA", conf=ADA_CONF, packed_derivation_path=ADA_BYRON_PACKED_DERIVATION_PATH)
 ADA_SHELLEY_CURRENCY_CONFIGURATION = CurrencyConfiguration(ticker="ADA", conf=ADA_CONF, packed_derivation_path=ADA_SHELLEY_PACKED_DERIVATION_PATH)
 NEAR_CURRENCY_CONFIGURATION = CurrencyConfiguration(ticker="NEAR", conf=NEAR_CONF, packed_derivation_path=NEAR_PACKED_DERIVATION_PATH)
+APTOS_CURRENCY_CONFIGURATION = CurrencyConfiguration(ticker="APT", conf=APTOS_CONF, packed_derivation_path=APTOS_PACKED_DERIVATION_PATH)
 
 
 # Helper that can be called from outside if we want to generate errors easily
